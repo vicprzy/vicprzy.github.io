@@ -45,7 +45,7 @@ float: right;
 
 /*NAV BAR SETUP*/
 ul {
-  background-color: #F45B69; /*nav bar color*/
+  background-color: #495867; /*nav bar color*/
   list-style-type: none;
   overflow: hidden;
   padding: 1em;
@@ -65,7 +65,7 @@ li a {
 }
 
 li a:hover{
-  background-color: #F6AF65; /*hover color*/
+  background-color: #83858C; /*hover color*/
 }
 
 /*HOME SETUP*/
