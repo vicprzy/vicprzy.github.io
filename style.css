@@ -1,0 +1,198 @@
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body {
+background-color: #edf5eb;
+}
+
+h1{
+  text-align: center;
+  font-weight: bold; 
+  font-size: 45px;
+  padding: 0.5em;
+}
+
+h2{
+  text-align: center;
+  font-weight: bold; 
+  padding: 1em;
+  background-color: #FB4B4E
+}
+
+h3{font-size: 22px;}
+
+h4{font-size: 20px;
+  margin-left: 12%;
+  color: #500707}
+
+
+p{
+  text-align: center;
+  font-weight: bold; 
+  margin: 30px;
+}
+
+img {
+border: 6px double #F45B69;
+display: block;
+float: right;
+}
+
+#photohome {height: 480px;
+           width: 540px;}
+
+/*NAV BAR SETUP*/
+ul {
+  background-color: #F45B69; /*nav bar color*/
+  list-style-type: none;
+  overflow: hidden;
+  padding: 1em;
+  text-align: center;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 1em;
+  text-align: center;
+}
+
+li a:hover{
+  background-color: #F6AF65; /*hover color*/
+}
+
+/*HOME SETUP*/
+.homepage {    /*title*/
+  padding: 30px;
+  background-color: #82204A;
+  color: white;
+  margin: 10px;
+}
+
+.option {
+  float: left;
+  width: 51%;
+  height: 455px;
+  margin: 10px;
+  font-size: 35px;
+  padding: 20px;
+}
+
+.option2 {
+  float: right;
+  width: 47%;
+  height: 400px;
+  margin: 10px;
+}
+
+#survey:hover{
+  color: #d66224;
+} 
+
+/*MENSTRAL SETUP */
+.beginning {
+  padding: 35px;
+  background-color: #d50760;
+  color: white;
+  text-align: center;
+  font-weight: bold; 
+}
+
+.tabs{padding: 18px;
+    margin: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    background-color: #bb4478;}
+
+.alltoknow{font-size: 18px;}
+
+
+/*NUTRITION SETUP*/
+.topics{margin: 20px;
+  text-align: center;
+  font-weight: 800; 
+  padding: 15px;
+  color: #ffe5e5;
+  background-color: #e0005a;
+}
+
+.ilovefonts{font-size: 19px;}
+
+#forbes:hover{
+  color: #66b5ff;
+} 
+
+/* EXCERSIZE SETUP */
+.thebodyneedslove{background-color: #ff470a;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;}
+
+#hiit {height: 500px;
+      margin: 25px;
+      display: inline-block;}
+
+.advice{
+  float: left;
+  width: 47%;
+  padding: 50px;
+  font-size: 25px;
+}
+
+
+
+/*RESOURCES SETUP*/
+.articles{
+    background-color: #ff0066;
+    text-align: center;
+    margin: 25px;
+    padding: 20px;
+    font-size: 22px;
+}
+
+.blurb {
+  float: left;
+  width: 40%;
+  padding: 20px;
+  margin: 75px;
+  text-align: "center";
+  font-size: 25px;
+}
+
+.blurb2 {
+  float: left;
+  width: 40%;
+  margin: 75px;
+  text-align: "center";
+  font-size: 25px;
+}
+.front{margin: 25px;}
+
+.books{margin: 40px;
+      display: inline-block;}
+
+.books2{margin: 55px;
+      display: inline-block;}
+
+#color1 {
+    background-color: #DB69B3 /* Color for blurbs */
+}
+#color2 {
+    background-color: #c83743 /* Color for blurbs */
+}
+
+#color3 {
+    background-color: #FB4B4E /* Color for blurbs */
+}
+
+#color4 {
+    background-color: #AF125A /* Color for blurbs */
+}
