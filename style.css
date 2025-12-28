@@ -41,9 +41,11 @@ float: right;
 }
 
 #photohome {
-  width: 47%;
-  object-fit: cover; /* Scales the image to cover the entire container without distortion, cropping as needed */
-  object-position: center; /* Centers the image within the container */
+    width: 40%;
+    max-width: 300px;
+    padding-top: 43px;
+    display: flex;
+    align-items: center;
   }
 
 /*NAV BAR SETUP*/
