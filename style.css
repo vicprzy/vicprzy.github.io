@@ -97,14 +97,14 @@ li a:hover{
   margin: 10px;
 }
 
-#survey:hover{
+#externallinks:hover{
   color: #d66224;
 } 
 
-/*MENSTRAL SETUP */
+/*RESEARCH SETUP */
 .beginning {
   padding: 35px;
-  background-color: #d50760;
+  background-color: #69140e;
   color: white;
   text-align: center;
   font-weight: bold; 
@@ -112,10 +112,10 @@ li a:hover{
 
 .tabs{padding: 18px;
     margin: 20px;
-    color: white;
+    color: #69140e;
     text-align: center;
     font-weight: bold;
-    background-color: #bb4478;}
+    background-color: white;}
 
 .alltoknow{font-size: 18px;}
 
