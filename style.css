@@ -120,7 +120,14 @@ li a:hover{
 .alltoknow{font-size: 18px;}
 
 
-/*NUTRITION SETUP*/
+/*HACKING SETUP*/
+.hardwaretitle {    /*title*/
+  padding: 25px;
+  background-color: #38A3A5;
+  color: white;
+  margin: 5px;
+}
+
 .topics{margin: 20px;
   text-align: center;
   font-weight: 800; 
@@ -131,11 +138,14 @@ li a:hover{
 
 .ilovefonts{font-size: 19px;}
 
-#forbes:hover{
-  color: #66b5ff;
-} 
+/* PRESS SETUP */
+.presstitle {    /*title*/
+  padding: 25px;
+  background-color: #495867;
+  color: white;
+  margin: 5px;
+}
 
-/* EXCERSIZE SETUP */
 .thebodyneedslove{background-color: #ff470a;
     text-align: center;
     padding: 5px;
@@ -154,7 +164,14 @@ li a:hover{
 
 
 
-/*RESOURCES SETUP*/
+/*SIDE QUEST SETUP*/
+.sidequesttitle {    /*title*/
+  padding: 25px;
+  background-color: #F79F79;
+  color: white;
+  margin: 5px;
+}
+
 .articles{
     background-color: #ff0066;
     text-align: center;
