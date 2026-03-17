@@ -1,0 +1,224 @@
+import { useState } from "react";
+import Navigation from "@/components/Navigation";
+
+/**
+ * Side-Quests Page
+ * Design: Modern Minimalist with Warm Accents
+ * - Similar layout to Research page but shorter descriptions
+ * - Arrow button on right side to expand and show more details
+ * - 4 hobbies/side quests
+ */
+
+interface SideQuest {
+  id: number;
+  title: string;
+  shortDescription: string;
+  fullDescription: string;
+  images: string[];
+  reflection: string;
+  keywords: string[];
+}
+
+const sideQuests: SideQuest[] = [
+  {
+    id: 1,
+    title: "Photography",
+    shortDescription: "Capturing moments through the lens",
+    fullDescription:
+      "I am passionate about landscape and portrait photography. Over the past 5 years, I have traveled to 15 countries capturing stunning visuals. My work focuses on natural lighting, composition, and storytelling through images. Several of my photos have been featured in local exhibitions.",
+    images: [
+      "https://via.placeholder.com/200x150?text=Landscape",
+      "https://via.placeholder.com/200x150?text=Portrait",
+      "https://via.placeholder.com/200x150?text=Nature",
+    ],
+    reflection:
+      "Photography has taught me patience, perspective, and the importance of seeing beauty in everyday moments. It complements my technical work by bringing a creative, visual dimension to my life.",
+    keywords: ["Photography", "Art", "Travel", "Visual Storytelling"],
+  },
+  {
+    id: 2,
+    title: "Music Production",
+    shortDescription: "Creating electronic and ambient soundscapes",
+    fullDescription:
+      "I produce electronic music using Ableton Live and various synthesizers. My focus is on ambient and experimental genres. I have released 2 EPs on independent labels and regularly perform at local venues. Music production allows me to explore sound design and creative expression.",
+    images: [
+      "https://via.placeholder.com/200x150?text=Studio+Setup",
+      "https://via.placeholder.com/200x150?text=Synthesizers",
+      "https://via.placeholder.com/200x150?text=Performance",
+    ],
+    reflection:
+      "Music production has been a therapeutic outlet and a way to express emotions that words cannot capture. It has also improved my understanding of audio processing and signal flow.",
+    keywords: ["Music", "Production", "Ableton", "Electronic"],
+  },
+  {
+    id: 3,
+    title: "Rock Climbing",
+    shortDescription: "Scaling heights and pushing physical limits",
+    fullDescription:
+      "Rock climbing has been my primary physical hobby for the past 3 years. I climb both indoors at local gyms and outdoors at natural rock formations. I have completed several challenging routes and am working towards my first multi-pitch climb. The sport has taught me problem-solving and resilience.",
+    images: [
+      "https://via.placeholder.com/200x150?text=Indoor+Climbing",
+      "https://via.placeholder.com/200x150?text=Outdoor+Route",
+      "https://via.placeholder.com/200x150?text=Summit",
+    ],
+    reflection:
+      "Climbing has been transformative for my physical and mental health. It teaches you to trust yourself, manage fear, and celebrate small victories. The climbing community is incredibly supportive and inspiring.",
+    keywords: ["Climbing", "Sports", "Fitness", "Outdoors"],
+  },
+  {
+    id: 4,
+    title: "Writing & Blogging",
+    shortDescription: "Sharing thoughts through written word",
+    fullDescription:
+      "I maintain a technical blog where I write about AI, software engineering, and creative projects. I have published 40+ articles with a combined readership of over 100k. My writing focuses on making complex topics accessible and sharing lessons learned from my projects and experiences.",
+    images: [
+      "https://via.placeholder.com/200x150?text=Blog+Posts",
+      "https://via.placeholder.com/200x150?text=Writing+Setup",
+      "https://via.placeholder.com/200x150?text=Community",
+    ],
+    reflection:
+      "Writing has helped me consolidate my knowledge and connect with a global community of learners. It has improved my communication skills and forced me to think deeply about the topics I care about.",
+    keywords: ["Writing", "Blogging", "Technical", "Community"],
+  },
+];
+
+export default function SideQuests() {
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+
+  const toggleExpand = (id: number) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
+
+  return (
+    <div className="min-h-screen bg-alice-blue pt-24">
+      <Navigation />
+
+      <main className="max-w-7xl mx-auto px-6 py-16">
+        <h1 className="font-display text-5xl md:text-6xl font-bold text-blue-state mb-16">
+          Side-Quests
+        </h1>
+
+        {/* Side-Quests */}
+        <div className="space-y-12">
+          {sideQuests.map((quest) => (
+            <div key={quest.id} className="space-y-6">
+              {/* Section Header */}
+              <div className="pb-4 border-b-2 border-tangerine-dream">
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-blue-state">
+                  {quest.title}
+                </h2>
+              </div>
+
+              {/* Content Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                {/* Left Column: Images (25%) */}
+                <div className="md:col-span-1">
+                  <div className="space-y-3">
+                    {quest.images.slice(0, 2).map((image, idx) => (
+                      <div
+                        key={idx}
+                        className="relative aspect-square rounded-lg overflow-hidden shadow-soft hover:shadow-medium smooth-transition"
+                      >
+                        <img
+                          src={image}
+                          alt={`${quest.title} ${idx + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Middle Column: Short Description (50%) */}
+                <div className="md:col-span-2 space-y-4">
+                  <p className="font-body text-blue-state leading-relaxed text-lg">
+                    {quest.shortDescription}
+                  </p>
+
+                  {/* Keywords */}
+                  <div className="flex flex-wrap gap-2">
+                    {quest.keywords.map((keyword) => (
+                      <span
+                        key={keyword}
+                        className="px-3 py-1 bg-tropical-teal/10 text-tropical-teal font-nav text-xs font-semibold rounded-full"
+                      >
+                        {keyword}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right Column: Expand Button (20%) */}
+                <div className="md:col-span-1 flex items-start justify-end">
+                  <button
+                    onClick={() => toggleExpand(quest.id)}
+                    className="flex items-center justify-center w-12 h-12 bg-gradient-accent text-white rounded-lg smooth-transition hover:shadow-medium shadow-soft hover-lift"
+                    aria-label="Expand details"
+                  >
+                    <svg
+                      className={`w-6 h-6 smooth-transition ${
+                        expandedId === quest.id ? "rotate-90" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              {/* Expanded Content */}
+              {expandedId === quest.id && (
+                <div className="mt-8 p-8 bg-white rounded-lg shadow-soft space-y-6 smooth-transition-lg">
+                  {/* Full Description */}
+                  <div>
+                    <h3 className="font-display text-xl font-bold text-blue-state mb-3">
+                      About
+                    </h3>
+                    <p className="font-body text-blue-state leading-relaxed text-lg">
+                      {quest.fullDescription}
+                    </p>
+                  </div>
+
+                  {/* Additional Images */}
+                  <div>
+                    <h3 className="font-display text-xl font-bold text-blue-state mb-3">
+                      Gallery
+                    </h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      {quest.images.map((image, idx) => (
+                        <img
+                          key={idx}
+                          src={image}
+                          alt={`${quest.title} ${idx + 1}`}
+                          className="w-full h-40 object-cover rounded-lg shadow-soft"
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Reflection */}
+                  <div className="p-6 bg-alice-blue rounded-lg border-l-4 border-tangerine-dream">
+                    <h3 className="font-display text-lg font-bold text-blue-state mb-3">
+                      My Reflection
+                    </h3>
+                    <p className="font-body text-blue-state leading-relaxed italic">
+                      {quest.reflection}
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
