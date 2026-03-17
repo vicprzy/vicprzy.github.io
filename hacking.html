@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacking - Personal Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">Portfolio</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="hacking.html" class="active">Hacking</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="side-quests.html">Side-Quests</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <!-- Page Header -->
+      <section class="section-header">
+        <h2>Personal Projects</h2>
+        <p>A collection of my hacking endeavors and personal projects. Click any project to learn more.</p>
+      </section>
+
+      <!-- Post-it Wall -->
+      <section class="postit-wall">
+        <!-- Project 1 -->
+        <div class="postit" data-name="AI Chat Assistant" data-description="A conversational AI built with transformer models and fine-tuned on domain-specific data. Features real-time streaming responses, multi-language support, and custom knowledge integration. Deployed on AWS with auto-scaling capabilities." data-technologies="Python|Transformers|FastAPI|AWS|PostgreSQL" data-keywords="AI|NLP|Chatbot|ML" data-images="https://via.placeholder.com/300x200?text=Project+1|https://via.placeholder.com/300x200?text=Project+1b" data-links="Live Demo:https://example.com|GitHub:https://github.com">
+          <h3>AI Chat Assistant</h3>
+          <p>Conversational AI with transformer models and real-time streaming.</p>
+          <div class="tags">
+            <span class="tag">AI</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Python</span>
+          </div>
+          <div class="postit-footer">Click to expand →</div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="postit" data-name="Real-time Data Visualization Dashboard" data-description="Interactive dashboard for visualizing streaming data from multiple sources. Built with React and WebSockets for real-time updates. Features custom charts, filtering, and export capabilities. Handles 10k+ data points with smooth performance." data-technologies="React|WebSockets|D3.js|Node.js|MongoDB" data-keywords="Visualization|Dashboard|Real-time|Frontend" data-images="https://via.placeholder.com/300x200?text=Project+2|https://via.placeholder.com/300x200?text=Project+2b" data-links="Live Demo:https://example.com|GitHub:https://github.com">
+          <h3>Real-time Data Dashboard</h3>
+          <p>Interactive visualization of streaming data with WebSockets.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">D3.js</span>
+            <span class="tag">WebSockets</span>
+          </div>
+          <div class="postit-footer">Click to expand →</div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="postit" data-name="Mobile Fitness Tracker App" data-description="Native mobile app for tracking workouts, nutrition, and health metrics. Integrates with popular fitness devices via APIs. Features machine learning-based workout recommendations and progress analytics. Available on iOS and Android." data-technologies="React Native|Firebase|TensorFlow Lite|Swift|Kotlin" data-keywords="Mobile|Fitness|Health|App" data-images="https://via.placeholder.com/300x200?text=Project+3|https://via.placeholder.com/300x200?text=Project+3b" data-links="App Store:https://example.com|GitHub:https://github.com">
+          <h3>Fitness Tracker App</h3>
+          <p>Native mobile app with ML-based workout recommendations.</p>
+          <div class="tags">
+            <span class="tag">Mobile</span>
+            <span class="tag">React Native</span>
+            <span class="tag">ML</span>
+          </div>
+          <div class="postit-footer">Click to expand →</div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="postit" data-name="Open Source CLI Tool" data-description="Command-line tool for automating common development tasks. Supports plugins and custom workflows. Published on npm with 5k+ weekly downloads. Actively maintained with community contributions." data-technologies="TypeScript|Node.js|npm|CLI|GitHub Actions" data-keywords="DevTools|CLI|Open Source|Automation" data-images="https://via.placeholder.com/300x200?text=Project+4|https://via.placeholder.com/300x200?text=Project+4b" data-links="npm Package:https://example.com|GitHub:https://github.com">
+          <h3>Open Source CLI Tool</h3>
+          <p>Development automation tool with 5k+ weekly npm downloads.</p>
+          <div class="tags">
+            <span class="tag">CLI</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Open Source</span>
+          </div>
+          <div class="postit-footer">Click to expand →</div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="postit" data-name="Blockchain Smart Contract Suite" data-description="Collection of audited smart contracts for DeFi applications. Implements advanced features like flash loans, yield farming, and governance tokens. Deployed on Ethereum mainnet with $10M+ TVL." data-technologies="Solidity|Ethereum|Hardhat|Web3.js|OpenZeppelin" data-keywords="Blockchain|Web3|DeFi|Solidity" data-images="https://via.placeholder.com/300x200?text=Project+5|https://via.placeholder.com/300x200?text=Project+5b" data-links="Etherscan:https://example.com|GitHub:https://github.com">
+          <h3>Blockchain Smart Contracts</h3>
+          <p>Audited DeFi smart contracts with $10M+ TVL on mainnet.</p>
+          <div class="tags">
+            <span class="tag">Blockchain</span>
+            <span class="tag">Solidity</span>
+            <span class="tag">DeFi</span>
+          </div>
+          <div class="postit-footer">Click to expand →</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Project Details</h2>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Content populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
