@@ -1,24 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">Portfolio</a>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="hacking.html">Hacking</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="side-quests.html">Side-Quests</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Personal Portfolio Website</title>    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
-  </head>
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Welcome to My <span class="accent">Creative Space</span></h1>
+          <p>I'm a passionate researcher, developer, and creative thinker exploring the intersection of technology and innovation. This portfolio showcases my research projects, personal hacking endeavors, press features, and hobbies.</p>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-  </body>
+          <!-- Connect Section -->
+          <h3>Connect with Me</h3>
+          <div class="button-group">
+            <a href="https://github.com" target="_blank" class="btn btn-primary">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" class="btn btn-primary">LinkedIn</a>
+            <a href="https://twitter.com" target="_blank" class="btn btn-primary">Twitter</a>
+          </div>
 
+          <!-- CV Button -->
+          <a href="cv.pdf" target="_blank" class="btn btn-gradient">Download CV (PDF)</a>
+        </div>
+
+        <!-- Photo Section -->
+        <div class="hero-photo">
+          <div style="text-align: center; width: 100%; transition: transform 0.2s ease-out;">
+            <div class="hero-photo-placeholder">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+              <p style="color: var(--blue-state); margin-top: 1rem;">Replace with your photo</p>
+              <p style="color: #999; font-size: 0.875rem; margin-top: 0.5rem;">Move your mouse to see the parallax effect</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Info Cards -->
+      <section class="info-cards">
+        <div class="card">
+          <h3>Research</h3>
+          <p>Exploring cutting-edge topics through rigorous investigation and publication.</p>
+        </div>
+        <div class="card">
+          <h3>Projects</h3>
+          <p>Building innovative solutions and experimenting with new technologies.</p>
+        </div>
+        <div class="card">
+          <h3>Hobbies</h3>
+          <p>Pursuing creative interests and personal growth outside of work.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
