@@ -1,44 +1,153 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Victoria Przydanek</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Victoria Przydanek</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-    <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="press.html">Press</a></li>
-      <li><a href="sidequests.html">Side-Quests</a></li>
-    </ul>
-  </nav>
-    
-<body>
-<!-- Start of the page -->
-    <div class= "homepage"><h1>Victoria Przydanek</h1></div>
-<!-- Photo -->
-    <div class= "aboutmephoto">
-      <img id= "photohome" src="firstyearphoto.jpg" alt="myphoto">
-    </div>
-<!-- Description -->
-<div class= "aboutmedescription" id = "color1">
-     <p>I am a first-year student in the Vagelos Integrated Program in Energy Research (VIPER) at the University of Pennsylvania 
-       studying Electrical Engineering and Physics.</p>
-     <p>Some topics of research that I am interested in exploring are renewable systems, energy optimization, machine learning, and 
-       bio-inspired robotics.</p>
-</div>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-  <a href="https://linkedin.com/in/victoria-przydanek-b30783282">LinkedIn</a> <a href="URL_of_destination">CV</a> 
-  <!-- <a href="URL_of_destination">Google Scholar</a> -->
+    <header class="topbar">
+      <div class="topbar__inner">
+        <div class="brand">
+          <div class="brand__mark" aria-hidden="true"></div>
+          <div class="brand__text">
+            <div class="brand__name">Victoria Przydanek</div>
+            <div class="brand__tag">Personal site</div>
+          </div>
+        </div>
 
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="#/home" data-route="home">Home</a>
+          <a class="nav__link" href="#/research" data-route="research">Research</a>
+          <a class="nav__link" href="#/hacking" data-route="hacking">Hacking</a>
+          <a class="nav__link" href="#/press" data-route="press">Press</a>
+          <a class="nav__link" href="#/side-quests" data-route="side-quests">Side-Quests</a>
+        </nav>
+      </div>
+    </header>
 
-  <script src="script.js"></script>
+    <main id="main" class="app">
+      <!-- HOME -->
+      <section class="page" data-page="home">
+        <div class="home">
+          <div class="home__hero">
+            <div class="home__copy">
+              <h1 class="h1">Hi, I’m Victoria.</h1>
+              <p class="lede">
+                Replace this with a short bio: what you do, what you care about, and what you’re exploring next.
+              </p>
 
-    <br>
-</body>
+              <div class="button-row">
+                <a class="btn btn--primary" href="https://example.com" target="_blank" rel="noreferrer">Important Link</a>
+                <a class="btn btn--ghost" href="https://example.com" target="_blank" rel="noreferrer">Another Link</a>
+                <a class="btn btn--accent" href="./Przydanek_Victoria_CV.pdf" target="_blank" rel="noreferrer">
+                  Open CV (PDF)
+                </a>
+              </div>
 
+              <div class="meta">
+                <span class="pill">Tangerine Dream</span>
+                <span class="pill">Tropical Teal</span>
+                <span class="pill">Blue State</span>
+              </div>
+            </div>
+
+            <div class="home__photo">
+              <img class="portrait" src="./assets/me.jpg" alt="Portrait photo of Victoria" />
+              <div class="portrait__frame" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <section class="home__interactive" aria-label="Interactive mouse tracking">
+            <div class="mouse-stage" id="mouseStage" role="img" aria-label="Interactive background that reacts to your mouse.">
+              <div class="blob blob--one" aria-hidden="true"></div>
+              <div class="blob blob--two" aria-hidden="true"></div>
+              <div class="cursor-ring" aria-hidden="true"></div>
+              <div class="mouse-stage__hint">
+                Move your mouse here
+                <span class="arrow">→</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- RESEARCH -->
+      <section class="page" data-page="research">
+        <div class="page__header">
+          <h1 class="h1">Research</h1>
+          <p class="lede">Structured like a paper: full-width headers, flowchart-style visuals left, narrative right.</p>
+        </div>
+
+        <div id="researchRoot" class="stack"></div>
+      </section>
+
+      <!-- HACKING -->
+      <section class="page" data-page="hacking">
+        <div class="page__header">
+          <h1 class="h1">Hacking</h1>
+          <p class="lede">A post-it wall of projects. Click a note to pop it out.</p>
+        </div>
+
+        <div id="hackingWall" class="wall" aria-label="Project post-it wall"></div>
+      </section>
+
+      <!-- PRESS -->
+      <section class="page" data-page="press">
+        <div class="page__header">
+          <h1 class="h1">Press</h1>
+          <p class="lede">Video features with context.</p>
+        </div>
+
+        <div id="pressRoot" class="press"></div>
+      </section>
+
+      <!-- SIDE QUESTS -->
+      <section class="page" data-page="side-quests">
+        <div class="page__header">
+          <h1 class="h1">Side-Quests</h1>
+          <p class="lede">Hobbies in compact sections—expand with an arrow to reveal more images + reflections.</p>
+        </div>
+
+        <div id="sideQuestsRoot" class="stack"></div>
+      </section>
+    </main>
+
+    <!-- Modal (Hacking pop-out) -->
+    <dialog class="modal" id="projectModal" aria-label="Project details">
+      <form method="dialog" class="modal__surface">
+        <div class="modal__top">
+          <div>
+            <div class="modal__title" id="modalTitle">Project</div>
+            <div class="modal__chips" id="modalChips"></div>
+          </div>
+          <button class="icon-btn" value="cancel" aria-label="Close">✕</button>
+        </div>
+
+        <div class="modal__body">
+          <div class="modal__grid">
+            <div class="modal__media" id="modalMedia"></div>
+            <div class="modal__text">
+              <div class="modal__desc" id="modalDesc"></div>
+              <div class="modal__links" id="modalLinks"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>© <span id="year"></span> Victoria Przydanek</span>
+        <span class="footer__sep">•</span>
+        <a href="#/home">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
