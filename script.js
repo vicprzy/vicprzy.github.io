@@ -1,5 +1,3 @@
-const routes = ["home", "research", "hacking", "press", "side-quests"];
-
 const content = {
   research: [
     {
@@ -76,23 +74,10 @@ const content = {
   ],
 };
 
-function getRouteFromHash() {
-  const raw = (location.hash || "#/home").replace(/^#\//, "");
-  if (!routes.includes(raw)) return "home";
-  return raw;
-}
-
-function setActiveRoute(route) {
-  document.querySelectorAll(".page").forEach((p) => {
-    p.classList.toggle("is-active", p.dataset.page === route);
-  });
-  document.querySelectorAll(".nav__link").forEach((a) => {
-    a.classList.toggle("is-active", a.dataset.route === route);
-  });
-}
-
 function renderResearch() {
   const root = document.getElementById("researchRoot");
+  if (!root) return;
+
   root.innerHTML = "";
 
   content.research.forEach((proj) => {
@@ -134,6 +119,8 @@ function renderResearch() {
 
 function renderHackingWall() {
   const wall = document.getElementById("hackingWall");
+  if (!wall) return;
+
   wall.innerHTML = "";
 
   content.hacking.forEach((p, idx) => {
@@ -159,10 +146,12 @@ function renderHackingWall() {
 }
 
 function openProjectModal(projectId) {
+  const modal = document.getElementById("projectModal");
+  if (!modal) return; // only exists on hacking.html
+
   const p = content.hacking.find((x) => x.id === projectId);
   if (!p) return;
 
-  const modal = document.getElementById("projectModal");
   document.getElementById("modalTitle").textContent = p.title;
 
   const chips = document.getElementById("modalChips");
@@ -191,6 +180,8 @@ function openProjectModal(projectId) {
 
 function renderPress() {
   const root = document.getElementById("pressRoot");
+  if (!root) return;
+
   root.innerHTML = "";
 
   content.press.forEach((v) => {
@@ -215,6 +206,8 @@ function renderPress() {
 
 function renderSideQuests() {
   const root = document.getElementById("sideQuestsRoot");
+  if (!root) return;
+
   root.innerHTML = "";
 
   content.sideQuests.forEach((q) => {
@@ -319,7 +312,6 @@ function initMouseTracking() {
   stage.addEventListener("pointermove", onMove);
 
   function tick() {
-    // spring-ish easing
     p1.x += (target.x - p1.x) * 0.08;
     p1.y += (target.y - p1.y) * 0.08;
 
@@ -357,26 +349,19 @@ function escapeAttr(s) {
 }
 
 function renderAll() {
+  // only renders into containers that exist on this page
   renderResearch();
   renderHackingWall();
   renderPress();
   renderSideQuests();
 }
 
-function onRoute() {
-  const route = getRouteFromHash();
-  setActiveRoute(route);
-}
-
 function init() {
-  document.getElementById("year").textContent = String(new Date().getFullYear());
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
   renderAll();
   initMouseTracking();
-
-  window.addEventListener("hashchange", onRoute);
-  if (!location.hash) location.hash = "#/home";
-  onRoute();
 }
 
 init();
