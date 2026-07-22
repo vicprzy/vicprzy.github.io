@@ -191,6 +191,13 @@ section {
   overflow: hidden;
 }
 
+.hero-photo-img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  display: block;
+}
+
 .hero-photo-placeholder {
   text-align: center;
 }
