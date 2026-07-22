@@ -180,8 +180,8 @@ section {
 }
 
 .hero-photo {
-  width: 100%;
-  height: 500px;
+  width: auto;
+  height: 100%;
   background: linear-gradient(135deg, rgba(56, 163, 165, 0.1) 0%, rgba(247, 159, 121, 0.1) 100%);
   border-radius: 0.5rem;
   display: flex;
@@ -191,12 +191,10 @@ section {
   overflow: hidden;
 }
 
-.hero-photo-img {
-  height: 100%;
-  width: auto;
+/* .hero-photo-img {
   object-fit: cover;
   display: block;
-}
+} */
 
 .hero-photo-placeholder {
   text-align: center;
