@@ -180,8 +180,8 @@ section {
 }
 
 .hero-photo {
-  width: 240px;
-  height: 320px;
+  width: 340px;
+  height: 420px;
   background: linear-gradient(135deg, rgba(56, 163, 165, 0.1) 0%, rgba(247, 159, 121, 0.1) 100%);
   border-radius: 0.5rem;
   display: flex;
@@ -189,6 +189,7 @@ section {
   justify-content: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   overflow: hidden;
+  transform: translateX(10%);
 }
 
 .hero-photo-img {
