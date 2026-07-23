@@ -186,7 +186,7 @@ section {
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   overflow: hidden;
   transform: translateX(10%);
