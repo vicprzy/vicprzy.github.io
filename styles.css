@@ -14,8 +14,8 @@
 
 /* Root Variables */
 :root {
-  --tangerine-dream: #4F3249;
-  --tropical-teal: #918E44;
+  --tangerine-dream: #918E44;   /*purple: #4F3249*/
+  --tropical-teal: #4F3249;   /*green: 918E44*/
   --blue-state: #495867;
   --alice-blue: #EDF6F9;
   --dark-garnet: #69140E;
